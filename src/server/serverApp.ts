@@ -8,7 +8,7 @@ export default class ServerApp {
 
     constructor() {
         this.app  = express();
-        this.port = '8080';
+        this.port = process.env.server_port || '3000';
 
         // middlewares
         this.middlewares();
